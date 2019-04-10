@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C22586AC51569E0EC80FAB22 /* Pods_SeeFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D28D6C309590E11E7D4CDD /* Pods_SeeFood.framework */; };
 		E304F503225A73AD00BD4E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E304F502225A73AD00BD4E19 /* AppDelegate.swift */; };
 		E304F505225A73AD00BD4E19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E304F504225A73AD00BD4E19 /* ViewController.swift */; };
 		E304F508225A73AD00BD4E19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E304F506225A73AD00BD4E19 /* Main.storyboard */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		320D9F0A7920CCED9CDB846E /* Pods-SeeFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeFood.debug.xcconfig"; path = "Target Support Files/Pods-SeeFood/Pods-SeeFood.debug.xcconfig"; sourceTree = "<group>"; };
+		32D28D6C309590E11E7D4CDD /* Pods_SeeFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeeFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B675C7908D3914FCFB45DBAA /* Pods-SeeFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeFood.release.xcconfig"; path = "Target Support Files/Pods-SeeFood/Pods-SeeFood.release.xcconfig"; sourceTree = "<group>"; };
 		E304F4FF225A73AD00BD4E19 /* SeeFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E304F502225A73AD00BD4E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E304F504225A73AD00BD4E19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,12 +39,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C22586AC51569E0EC80FAB22 /* Pods_SeeFood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		131BC747A38C8A7E04E9B558 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32D28D6C309590E11E7D4CDD /* Pods_SeeFood.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3256B94C11E532EFBE9DA43B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				320D9F0A7920CCED9CDB846E /* Pods-SeeFood.debug.xcconfig */,
+				B675C7908D3914FCFB45DBAA /* Pods-SeeFood.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E304F4F6225A73AD00BD4E19 = {
 			isa = PBXGroup;
 			children = (
@@ -48,6 +70,8 @@
 				E304F516225A9A2200BD4E19 /* README.md */,
 				E304F501225A73AD00BD4E19 /* SeeFood */,
 				E304F500225A73AD00BD4E19 /* Products */,
+				3256B94C11E532EFBE9DA43B /* Pods */,
+				131BC747A38C8A7E04E9B558 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E304F511225A73AF00BD4E19 /* Build configuration list for PBXNativeTarget "SeeFood" */;
 			buildPhases = (
+				A60209D2ACB3CCB57EAAAD41 /* [CP] Check Pods Manifest.lock */,
 				E304F4FB225A73AD00BD4E19 /* Sources */,
 				E304F4FC225A73AD00BD4E19 /* Frameworks */,
 				E304F4FD225A73AD00BD4E19 /* Resources */,
+				5F2172FEAE1DFF400190FE2F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +166,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F2172FEAE1DFF400190FE2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SeeFood/Pods-SeeFood-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IBMWatsonRestKit/RestKit.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMWatsonVisualRecognitionV3/VisualRecognition.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RestKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisualRecognition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SeeFood/Pods-SeeFood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A60209D2ACB3CCB57EAAAD41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SeeFood-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E304F4FB225A73AD00BD4E19 /* Sources */ = {
@@ -292,6 +369,7 @@
 		};
 		E304F512225A73AF00BD4E19 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 320D9F0A7920CCED9CDB846E /* Pods-SeeFood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -310,6 +388,7 @@
 		};
 		E304F513225A73AF00BD4E19 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B675C7908D3914FCFB45DBAA /* Pods-SeeFood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

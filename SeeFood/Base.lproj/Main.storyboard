@@ -18,16 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x4t-vz-wIb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotdogBackground" translatesAutoresizingMaskIntoConstraints="NO" id="H4u-Yn-UEA">
+                                <rect key="frame" x="63.5" y="351.5" width="287" height="193"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="287" id="Q2T-mI-8Ha"/>
+                                    <constraint firstAttribute="height" constant="193" id="uvg-cI-jhx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x4t-vz-wIb" userLabel="User Chosen Image">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JRw-Mp-kYU">
+                                <rect key="frame" x="20" y="88" width="374" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="pMN-5B-epu"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.83529411764705885" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="x4t-vz-wIb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3Tl-wb-Imv"/>
                             <constraint firstItem="x4t-vz-wIb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8t8-yH-zlf"/>
+                            <constraint firstItem="JRw-Mp-kYU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Bzb-f1-1fR"/>
+                            <constraint firstItem="JRw-Mp-kYU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ywr-qE-DVa"/>
+                            <constraint firstItem="H4u-Yn-UEA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZFK-CJ-ufe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JRw-Mp-kYU" secondAttribute="trailing" constant="20" id="llY-pg-cHC"/>
                             <constraint firstItem="x4t-vz-wIb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qc8-pK-EZU"/>
                             <constraint firstItem="x4t-vz-wIb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uYu-xh-cGA"/>
+                            <constraint firstItem="H4u-Yn-UEA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vU3-AR-0JX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -39,7 +57,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cameraButton" destination="wfv-86-zvq" id="E0e-Op-9NA"/>
                         <outlet property="imageView" destination="x4t-vz-wIb" id="fgR-ym-hbr"/>
+                        <outlet property="topBarImageView" destination="JRw-Mp-kYU" id="oye-tI-aby"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -54,6 +74,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V7A-3k-Vor">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                            <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -65,4 +89,7 @@
             <point key="canvasLocation" x="-129" y="115"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hotdogBackground" width="191" height="143"/>
+    </resources>
 </document>
